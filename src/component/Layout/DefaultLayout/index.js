@@ -1,0 +1,19 @@
+import Header from "~/component/Layout/components/Header";
+import Sidebar from "./Sidebar";
+import React from 'react'
+
+function DefaultLayout({children}) {
+  return (
+    <div>
+        <Header></Header>
+        <div className="container">
+            <Sidebar/>
+            <div className="content">
+                {children}
+            </div>
+        </div>
+    </div>
+  )
+}
+
+export default DefaultLayout
