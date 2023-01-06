@@ -16,10 +16,15 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.search,.search-result{
+  width: 361px;
+
+}
 .search {
   position: relative;
   display: flex;
-  width: 364px;
+  width: 361px;
   height: var(--search-height);
   background-color: rgba(22, 24, 35, 0.06);
   border-radius: var(--search-boder-radius);
@@ -49,7 +54,12 @@
     border: rgba(22, 24, 35, 0.2);
   }
 }
-
+.search-title{
+  color: rgba(22, 24, 35, 0.5);
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 5px 12px;
+}
 .clear,
 .loading {
   position: absolute;
