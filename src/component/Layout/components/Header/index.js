@@ -9,8 +9,6 @@ import {
   faEllipsisVertical,
   faA,
   faKeyboard,
-  faCloudUpload,
-  faMessage,
   faUser,
   faCoins,
   faTools,
@@ -26,6 +24,8 @@ import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/component/Popper';
 import AccountItem from '~/component/AccountItem';
 import Menu from '~/component/Popper/Menu';
+import { InboxIcon, MessageIcon } from '~/component/Icons';
+import Image from '~/component/Image';
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
   {
@@ -131,14 +131,19 @@ function Header() {
         <div className={cx('action')}>
           {currentUser ? (
             <Fragment>
-              <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
+              <Tippy delay={[0, 200]} content="Upload" placement="bottom">
                 <button className={cx('action-btn')}>
-                  <FontAwesomeIcon icon={faCloudUpload} />
+                  <MessageIcon />
                 </button>
               </Tippy>
-              <Tippy content="Message">
+              <Tippy delay={[0, 200]} content="Message" placement="bottom">
                 <button className={cx('action-btn')}>
-                  <FontAwesomeIcon icon={faMessage} />
+                  <MessageIcon />
+                </button>
+              </Tippy>
+              <Tippy delay={[0, 200]} content="Inbox" placement="bottom">
+                <button className={cx('action-btn')}>
+                  <InboxIcon />
                 </button>
               </Tippy>
             </Fragment>
@@ -150,7 +155,7 @@ function Header() {
           )}
           <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
             {currentUser ? (
-              <img
+              <Image
                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/a481917deeab7d399b9ab8f002cb1fa8~c5_100x100.jpeg?x-expires=1673406000&x-signature=TJwV7uOITiUaCee4MfBLicJZbPE%3D"
                 className={cx('user-avatar')}
                 alt="NguyenVanA"
