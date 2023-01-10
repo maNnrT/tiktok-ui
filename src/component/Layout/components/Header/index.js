@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -53,7 +53,6 @@ const MENU_ITEMS = [
   },
 ];
 function Header() {
-  
   const handleMenuChange = (menuItem) => {
     switch (menuItem.type) {
       case 'language':
@@ -91,7 +90,7 @@ function Header() {
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
         <img src={images.logo} alt="TikToK" />
-        <Search/>
+        <Search />
 
         <div className={cx('action')}>
           {currentUser ? (
