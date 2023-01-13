@@ -1,11 +1,9 @@
 import { useEffect, useState, useRef } from 'react';
-import axios from 'axios';
 import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import HeadlessTippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
 
-import * as searchServices from '~/apiServices/searchServices';
-import * as request from '~/utils/request';
+import * as searchServices from '~/services/searchService';
 import { Wrapper as PopperWrapper } from '~/component/Popper';
 import AccountItem from '~/component/AccountItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
