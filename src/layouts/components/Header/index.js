@@ -16,7 +16,6 @@ import 'tippy.js/dist/tippy.css';
 import { Link } from 'react-router-dom';
 import config from '~/config';
 
-
 import Button from '~/component/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
@@ -95,7 +94,6 @@ function Header() {
         <Link to={config.routes.home} className={cx('logo-link')}>
           <img src={images.logo} alt="TikToK" />
         </Link>
-        <Button>click me</Button>
         <Search />
 
         <div className={cx('action')}>
