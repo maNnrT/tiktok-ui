@@ -1,4 +1,3 @@
-import React from 'react';
 import SuggestedAccounts from '~/component/SuggestedAccounts';
 import styles from './Sidebar.module.scss';
 import classNames from 'classnames/bind';
